@@ -45,7 +45,7 @@ footer {
   }
   
   footer {
-    margin: 1em;
+    margin:1em;
     width: 95%;  
 }
   footer > img {
@@ -54,6 +54,32 @@ footer {
    }
    footer > ul {
     font-size: 10px;
+    padding-left: 10px;
+    margin: 0px
    }
 }
 
+@media screen and (max-width: 375px) {
+  .nav > nav > ul {
+    font-size: 10px;
+   }
+   .logo {
+    width: 85px;
+  }
+  footer > img {
+    width: 180px;
+    height: 80px;
+   }
+  
+}
+@media screen and (max-width: 320px) {
+  .nav > nav > ul {
+    font-size: 8px;
+   }
+  .logo {
+    width: 70spx;
+  }
+  footer > ul {
+    font-size: 8px;
+   }
+}
