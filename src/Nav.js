@@ -1,12 +1,13 @@
 import React from "react";
+import "./App.css";
 import { ReactComponent as Logo } from "./images/Logo.svg";
 
 export default function Nav() {
     return(
-        <>
-        <Logo />        
-        <nav>
+        <div className="nav">           
+        <nav>    
             <ul>
+                <li><Logo className="logo"/> </li>
                 <li><a>Home</a></li>
                 <li><a>About</a></li>
                 <li><a>Menu</a></li>
@@ -15,6 +16,6 @@ export default function Nav() {
                 <li><a>Login</a></li>
             </ul>
         </nav>
-        </>
+        </div>
     )
 }
