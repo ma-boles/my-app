@@ -21,16 +21,15 @@
   
 }
 .content {
-  width: 385px;
-  height: 330px;
   margin-left: 16%;
+  margin-right: 30%;
   padding: 2em 0em;
 }
 .content > h1 {
   color: #f4ce14;
   font-size: 40px;
   font-weight: medium;
-  margin-bottom: 0px;
+  margin-bottom: 0%;
 }
 .content > h3 {
   color: #f4ce14;
@@ -50,14 +49,15 @@
   padding-bottom: 1em;
   border-radius: 10px;
   font-weight: bold;
+  margin-bottom: 6%
 }
 .img--food {
-  width: 274px;
-  height: 225px;
+  width: 20em;
+  height: 17em;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: auto;
-  margin-right: 15%;
+  margin-right: 17%;
 }
 /* main */
 /* specials */
@@ -87,15 +87,18 @@
 }
   /* menu card */
   .menuCard {
-    width: 330px;
-    height: 450px;
-    margin: .5em;
+    width: 20em;
+    margin: .2em;
     background-color: rgba(183, 183, 183, 0.777);
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
+    
   }
   .menu--card {
     display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .menuCard > .heading {
     display: flex;
@@ -128,28 +131,47 @@
   .testimonials {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.227);
-    padding: 7em 0em;
-   
+    padding: 7% 0%;
   }
   
   .testimonials--card {
     display: flex;
     justify-content: center;
+    justify-content: space-evenly;
+    margin: 5% 10%;
+    flex-wrap: wrap;
   }
   .testimonials--card > .card {
-    background-color: red;
-    width: 10em;
-    margin: 1em;
+    background-color: grey;
+    margin: .5%;
+  }
+  .card > h6 {
+    padding: 1% 6%
+  }
+  .midCard {
+    display: flex;
+  }
+  .midCard > h6 {
+    margin: 2em;
+  }
+  .div--img {
+    background-color: rgba(255, 255, 255, 0.637);
+    padding: 2em 2.5em;    
+    margin-left: .5em;
+    font-size: 18px;
+
   }
   /* about */
   .about {
     display: flex;
   }
   .about--content {
-    width: 385px;
-    height: 330px;
+    width: 25em;
+    margin-right: 5%;
     margin-left: 15%;
-    padding: 5em 0em;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    padding: 3em 0em;
   }
   .about--content > h2 {
     color: #f4ce14;
@@ -159,8 +181,8 @@
     margin-top: 0px;
   }
   .img--about {
-    width: 340px;
-    height: 300px;
+    width: 25em;
+    height: 20em;
     margin-top:auto;
     margin-bottom: auto;
     margin-left: auto;
@@ -193,12 +215,31 @@ footer {
   justify-content: space-evenly;
  }
 
-@media screen and (max-width: 425px) {
-  .App {
-    margin: 1em
+@media screen and (max-width: 1024px) {
+  .content {
+    margin-right: 10%;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about--content {
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+  .img--about {
+    margin-bottom: 20%;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 425px) { 
   .nav > nav > ul {
-   padding: 0px;
+   padding: 10px;
    font-size: 12px;
    margin-right: auto;
    margin-left: auto;
@@ -206,7 +247,39 @@ footer {
   .logo {
     width: 100px;
   }
-  
+
+  /* header */ 
+  .content {
+    margin-left: 7%;
+    margin-right: 15%;
+  }
+  .content > button {
+    width: 10em;
+    font-size: 12px;
+    padding: 10px;
+  }
+
+   /* specials */
+   .specials--section {
+    margin: 5%;
+   }
+   .specials--heading > h2 {
+    font-size: 22px;
+   }
+   .specials--heading > button {
+    width: 8em;
+    font-size: 12px;
+    padding: 10px;
+   }
+
+   .about--content {
+    margin: 10px;
+    padding-bottom: 10px;
+  }
+  .img--about {
+    width: 95%;
+  }
+  /* footer */
   footer {
     margin:1em;
     width: 95%;  
@@ -220,6 +293,7 @@ footer {
     padding-left: 10px;
     margin: 0px
    }
+  
 }
 
 @media screen and (max-width: 375px) {
@@ -229,6 +303,18 @@ footer {
    .logo {
     width: 85px;
   }
+
+  /* header */
+  .img--food {
+    width: 10em;
+    height: 14em;
+  }
+
+  /* about */ 
+  .img--about {
+    height: 16em;
+  }
+  /* footer */
   footer > img {
     width: 180px;
     height: 80px;
@@ -240,8 +326,22 @@ footer {
     font-size: 8px;
    }
   .logo {
-    width: 70spx;
+    width: 70px;
   }
+
+  /* about */
+  .img--about {
+    height: 15em;
+  }
+  /* header */
+  .content {
+    margin-right: 5%;
+  }
+  .img--food {
+    width: 9em;
+    height: 13em;
+  }
+
   footer > ul {
     font-size: 8px;
    }
