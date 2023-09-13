@@ -22,8 +22,7 @@ export default function Main() {
                     <h3>Testimonials</h3>
                 </heading>
                 <aside className="testimonials--card">
-                <TestimonialCard />
-
+                    <TestimonialCard />
                 </aside>
             </section>
             <section className="about">

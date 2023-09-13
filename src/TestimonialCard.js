@@ -6,7 +6,7 @@ export default function TestimonialCard() {
         <div className="card">
             <h6>Rating</h6>
             <div className="midCard">
-                <img></img>
+                <div className="div--img">img</div>
                 <h6>Name</h6>
             </div>
             <h6>Review text</h6>
@@ -14,7 +14,7 @@ export default function TestimonialCard() {
         <div className="card">
             <h6>Rating</h6>
             <div className="midCard">
-                <img></img>
+            <div className="div--img">img</div>
                 <h6>Name</h6>
             </div>
             <h6>Review text</h6>
@@ -22,7 +22,7 @@ export default function TestimonialCard() {
         <div className="card">
             <h6>Rating</h6>
             <div className="midCard">
-                <img></img>
+            <div className="div--img">img</div>
                 <h6>Name</h6>
             </div>
             <h6>Review text</h6>
@@ -30,7 +30,7 @@ export default function TestimonialCard() {
         <div className="card">
             <h6>Rating</h6>
             <div className="midCard">
-                <img></img>
+            <div className="div--img">img</div>
                 <h6>Name</h6>
             </div>
             <h6>Review text</h6>
