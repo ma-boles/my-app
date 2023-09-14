@@ -1,5 +1,6 @@
 import React from "react";
 import Food  from "./images/restauranfood.jpg";
+import { Link } from "react-router-dom";
 
 
 export default function Hero () {
@@ -11,7 +12,9 @@ export default function Hero () {
                 <h3>Chicago</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <button className="button--header">Reserve A Table</button>
+                <Link to="../ReservationsPage">
+                    <button className="button--header">Reserve A Table</button>
+                </Link>
             </div>
             <img src={Food} className="img--food"></img>
            
