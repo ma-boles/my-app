@@ -8,14 +8,26 @@ export default function Nav() {
         <nav>    
             <ul>
                 <li><Logo className="logo"/> </li>
-                <li><a>Home</a></li>
-                <li><a>About</a></li>
+                <li>
+                    <Link to="/">Home</Link>               
+                </li>
+                <li>
+                        
+                </li>
                 <li><a>Menu</a></li>
-                <li><a>Reservations</a></li>
+                <li>
+                    <Link to="/BookingPage">Reservations</Link>
+                </li>
                 <li><a>Order Online</a></li>
                 <li><a>Login</a></li>
             </ul>
         </nav>
         </div>
     )
-}
+}/*
+<li><a>Home</a></li>
+<li><a>About</a></li>
+<li><a>Menu</a></li>
+<li><a>Reservations</a></li>
+<li><a>Order Online</a></li>
+<li><a>Login</a></li>*/
