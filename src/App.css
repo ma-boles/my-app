@@ -215,6 +215,62 @@ footer {
   justify-content: space-evenly;
  }
 
+
+/* reservations page */
+.reservations {
+  background-color: grey;
+  padding: .1rem;
+}
+.reservations--form {
+  background-color: rgb(199, 199, 199);
+  margin: 5% 20%;
+  border-radius: 10px;
+  justify-content: center;
+}
+.reservations--form > h3 {
+  text-align: center;
+  padding-top: 3rem;
+}
+.reservations--form > form {
+  text-align: center;
+}
+.reservations--form > form > div {
+  margin: 1.5rem auto ; 
+}
+.reservations--form > form > div > label {
+  font-size: 1rem;
+}
+
+.reservations--form > form > div > input{
+  font-size: 1rem;
+  text-indent: 5px;
+  padding: .25rem;
+  border-radius: 5px;
+  border: none
+}
+select {
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: .25rem;
+}
+option {
+  font-size: 1rem;
+}
+.reservations--form > form > div > button {
+  width: 10rem;
+  height: 2rem;
+  margin-bottom: 3rem;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 5px;
+  background-color: #f4ce14;
+  font-size: .9rem;
+}
+
+
+
+
+
 @media screen and (max-width: 1024px) {
   .content {
     margin-right: 10%;
