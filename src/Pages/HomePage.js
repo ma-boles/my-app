@@ -2,7 +2,7 @@ import React from "react";
 import Hero from "../Hero";
 import Main from "../Main";
 
-export default function Home() {
+export default function HomePage() {
     return(
         <>
         

@@ -2,7 +2,7 @@ import React from "react";
 import Chefs from "../images/Mario and Adrian b.jpg";
 
 
-export default function About () {
+export default function AboutPage () {
     return(
         <>
         <section className="about">
