@@ -233,12 +233,15 @@ footer {
 }
 .reservations--form > form {
   text-align: center;
+  margin: 5% 27%;
 }
 .reservations--form > form > div {
   margin: 1.5rem auto ; 
+  display: flex;
 }
 .reservations--form > form > div > label {
   font-size: 1rem;
+  margin-right: 5%;
 }
 
 .reservations--form > form > div > input{
@@ -246,12 +249,15 @@ footer {
   text-indent: 5px;
   padding: .25rem;
   border-radius: 5px;
-  border: none
+  border: none;
+  width: 100%;
+
 }
 select {
   border-radius: 5px;
   font-size: 1rem;
   padding: .25rem;
+  width: 100%;
 }
 option {
   font-size: 1rem;
@@ -265,6 +271,7 @@ option {
   border-radius: 5px;
   background-color: #f4ce14;
   font-size: .9rem;
+  cursor: pointer;
 }
 
 
