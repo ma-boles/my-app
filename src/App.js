@@ -2,9 +2,9 @@ import './App.css';
 import Nav from './Nav';
 import Footer from './Footer';
 import { Routes, Route } from "react-router-dom";
-import Home from './Pages/HomePage';
-import Reservations from './Pages/ReservationsPage';
-import About from './Pages/AboutPage';
+import HomePage from './Pages/HomePage';
+import BookingPage from './Pages/BookingPage';
+import AboutPage from './Pages/AboutPage';
 
 
 function App() {
@@ -12,9 +12,9 @@ function App() {
       <div className='App'>  
         <Nav />
             <Routes>
-                <Route path="/HomePage" element={<Home/>} />
-                <Route path="/ReservationsPage" element={<Reservations/>}/>
-                <Route path="/AboutPage" element={<About />} />
+                <Route path="/HomePage" element={<HomePage/>} />
+                <Route path="/BookingPage" element={<BookingPage/>}/>
+                <Route path="/AboutPage" element={<AboutPage />} />
             </Routes>
         <Footer />
       </div>
