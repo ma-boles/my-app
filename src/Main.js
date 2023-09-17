@@ -43,6 +43,7 @@ let date
 
 let availableTimes = ["", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30"]
     const [ state, dispatch ] = useReducer(reducer,  initializeTimes(date))
+const occasions = [ "", "Birthday", "Anniversary", "Banquet"]
 
 /*
     const [ availableTimes, setAvailableTimes ] = React.useState('')
