@@ -1,12 +1,67 @@
 import React from "react";
+import { useReducer } from "react";
 import MenuCard from "./MenuCard";
 import TestimonialCard from "./TestimonialCard";
 import Chefs from "./images/Mario and Adrian b.jpg";
 
+
+/*
+const reducer = (state, action) => {
+    switch(action.type) {
+        case "open" :
+            return { ...state, date: state.date + 1};
+        case "reserved":
+            return { ...state, date: state.date -1};
+        default:
+            throw new Error();
+    }
+} */
+
+function reducer (state, action) {
+    const { type, payload } = action;
+
+    switch(action.type) {
+        case "open" :
+            return { ...state, date: state.date + 1};
+        case "reserved":
+            return { ...state, date: state.date -1};
+        default:
+            throw new Error();
+
+        return state;
+    /*return {...state, [type]: payload };*/
+}
+}
+
+ /*function reducer (initializeTimes, updateTimes) {
+        if (updateTimes.type === "reserve") return {date: initializeTimes.date - 1};
+        if(updateTimes.type === "cancel") return {date: initializeTimes.date + 1};
+        return initializeTimes
+    }*/
 export default function Main() {
-    return (
-        <>
+let date
+
+let availableTimes = ["", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30"]
+    const [ state, dispatch ] = useReducer(reducer,  initializeTimes(date))
+
+/*
+    const [ availableTimes, setAvailableTimes ] = React.useState('')
+   */
+
+
+    function updateTimes (date) {
+        console.log("test")
         
+    }
+
+    function initializeTimes (date) {
+        const currentDate = new Date().toISOString().split("T") [0]
+        console.log(initializeTimes)
+    }
+
+
+    return (
+        <>      
             <section className="specials--section">
                 <heading className="specials--heading">
                     <h2>Specials</h2>
