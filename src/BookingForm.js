@@ -1,7 +1,8 @@
 import React from "react";
 
 
-export default function BookingForm ({ /*availableTimes,*/ dispatch, submitForm }) {
+export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, submitForm }) {
+
 
     const [ formData, setFormData ] = React.useState({
         name: "", 
@@ -10,10 +11,10 @@ export default function BookingForm ({ /*availableTimes,*/ dispatch, submitForm 
         time: "",
         date: "",
         guests: "",
-        occasion: "Birthday"
+        occasion: ""
     })
 
-    const handleFormChange = (event) => {
+    const handleChangeForm = (event) => {
         const { name, value } = event.target
         setFormData((prevFormData) => ({
             ...prevFormData,
@@ -21,10 +22,19 @@ export default function BookingForm ({ /*availableTimes,*/ dispatch, submitForm 
         }))
     }
 
+    const handleChangeDate = async (event) => {
+        const { name, value } = event.target
+        setFormData((prevFormData) => ({
+            ...prevFormData,
+            [name]: value
+        }))
+        dispatch({ type: "update_times", payload: value })
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault()
         submitForm(formData)
-        /*
+        
 
         console.log(formData.name)
         console.log(formData.occasion)
@@ -32,59 +42,61 @@ export default function BookingForm ({ /*availableTimes,*/ dispatch, submitForm 
         console.log(formData.time)
         console.log(formData.date)
         console.log(formData.email)
-        console.log(formData.phone)*/
+        console.log(formData.phone)
     }
 
-    let availableTimes = ["", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30"]  
     const currentDate = new Date().toISOString().split("T") [0]
+
+    let occasions = [ "", "Birthday", "Anniversary", "Banquet"]
+    let availableTimes = ["", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30"]
+
     const options = availableTimes.map(time => <option key={time}>{time}</option>)
+    const occasionsOptions = occasions.map(occasion => <option key={occasion}>{occasion}</option>)
 
     return(
         <>
         <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label><br />
-                    <input type="text" id="name" name="name" required value={formData.name} onChange={handleFormChange} />
+                    <input type="text" id="name" name="name" required value={formData.name} onChange={handleChangeForm} />
                 </div>
 
                 <div>
                     <label htmlFor="email">Email:</label><br />
-                    <input type="email" id="email" name="email" required value={formData.email} onChange={handleFormChange}></input>
+                    <input type="email" id="email" name="email" required value={formData.email} onChange={handleChangeForm}></input>
                 </div>
 
                 <div>
                     <label htmlFor="phone">Phone:</label>
-                    <input type="text"  id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required value={formData.phone} onChange={handleFormChange}></input>
+                    <input type="text" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required value={formData.phone} onChange={handleChangeForm}></input>
                 </div>
 
                 <div>
-                        <label htmlFor="date">Date:</label>
-                        <input id="date" value={formData.date} onChange={(e) => setFormData.date(e.target.value)}/>
+                    <label htmlFor="date">Date:</label>
+                    <input type="date" id="date" name="date" value={formData.date} min={currentDate} onChange={handleChangeDate}/>
                 </div>
 
                 <div>
                     <label htmlFor="time">Time:</label><br />
-                    <select id="time" value={formData.time} onChange={handleFormChange}>
-                        {options}
+                    <select id="time" name="time" value={formData.time} onChange={handleChangeForm}>
+                        {options} 
                     </select>
                 </div>
 
                 <div>
                     <label htmlFor="guests">Guests:</label><br />
-                    <input type="number" id="guests" name="guests" placeholder="1" min="1" max="20" value={formData.guests} onChange={handleFormChange}/>
+                    <input type="number" id="guests" name="guests" placeholder="1" min="1" max="20" value={formData.guests} onChange={handleChangeForm}/>
                 </div>
 
                 <div>
                     <label htmlFor="occasion">Occasion:</label><br />
-                    <select id="occasion" value={formData.occasion} onChange={handleFormChange}>
-                        <option value={"Birthday"}>Birthday</option>
-                        <option value={"Anniversary"}>Anniversary</option>
-                        <option value={"Banquet"}>Banquet</option>
+                    <select id="occasion" name="occasion" value={formData.occasion} onChange={handleChangeForm}>
+                        {occasionsOptions}
                     </select>
                 </div>
-
+     
                 <div>
-                    <button type="submit" value="Reservation" onClick={handleSubmit}>Reserve</button>
+                    <button type="submit" value="Reservation" onClick={handleSubmit} aria-label="reserve">Reserve</button>
                 </div>
 
             </form>
@@ -92,3 +104,4 @@ export default function BookingForm ({ /*availableTimes,*/ dispatch, submitForm 
     )
 }
 
+ 
