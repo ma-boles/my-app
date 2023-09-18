@@ -48,7 +48,7 @@ export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, 
 
     return(
         <>
-        <h1>title test</h1>
+        
         <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label><br />
@@ -98,4 +98,4 @@ export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, 
     )
 }
 
- 
+ /*<h1>title test</h1>*/
