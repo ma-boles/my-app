@@ -2,9 +2,6 @@ import React from "react";
 import { useReducer } from "react";
 import BookingForm from "../BookingForm";
 
-
-
-
 export default function BookingPage() {
 
     const [date, setDate] = React.useState(new Date())

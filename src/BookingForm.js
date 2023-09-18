@@ -34,15 +34,8 @@ export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, 
     const handleSubmit = (event) => {
         event.preventDefault()
         submitForm(formData)
-        
 
-        console.log(formData.name)
-        console.log(formData.occasion)
-        console.log(formData.guests)
-        console.log(formData.time)
-        console.log(formData.date)
-        console.log(formData.email)
-        console.log(formData.phone)
+        console.log(formData)
     }
 
     const currentDate = new Date().toISOString().split("T") [0]
@@ -55,6 +48,7 @@ export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, 
 
     return(
         <>
+        <h1>title test</h1>
         <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label><br />
