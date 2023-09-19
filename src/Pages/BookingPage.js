@@ -1,17 +1,23 @@
 import React from "react";
 import { useReducer } from "react";
 import BookingForm from "../BookingForm";
+import fetchAPI from "../api";
+import submitAPI from "../api";
+
 
 export default function BookingPage() {
 
     const [date, setDate] = React.useState(new Date())
 
-    
+   
+
     function initializeTimes(date) {
+        return fetchAPI(date);
     } 
 
     function updateTimes(date){
         const dateObj = new Date(date)
+        return fetchAPI(dateObj)
     }
 
     function submitForm(formData) {
@@ -29,6 +35,9 @@ export default function BookingPage() {
         }
         return newState
     }
+
+    
+
     const [ availableTimes, dispatch ] = useReducer(reducer, initializeTimes(date))
 
     return (
