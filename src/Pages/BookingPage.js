@@ -5,6 +5,7 @@ import fetchAPI from "../api";
 import submitAPI from "../api";
 
 
+
 export default function BookingPage() {
 
     const [date, setDate] = React.useState(new Date())
@@ -16,8 +17,8 @@ export default function BookingPage() {
     } 
 
     function updateTimes(date){
-        const dateObj = new Date(date)
-        return fetchAPI(dateObj)
+        
+        return fetchAPI(date)
     }
 
     function submitForm(formData) {
