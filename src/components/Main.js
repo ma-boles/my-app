@@ -2,7 +2,7 @@ import React from "react";
 import { useReducer } from "react";
 import MenuCard from "./MenuCard";
 import TestimonialCard from "./TestimonialCard";
-import Chefs from "./images/Mario and Adrian b.jpg";
+import Chefs from "../images/Mario and Adrian b.jpg";
 
 
 /*

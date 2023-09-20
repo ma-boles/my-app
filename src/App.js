@@ -1,6 +1,6 @@
-import './App.css';
-import Nav from './Nav';
-import Footer from './Footer';
+import './styles/App.css';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
 import { Routes, Route } from "react-router-dom";
 import HomePage from './Pages/HomePage';
 import BookingPage from './Pages/BookingPage';

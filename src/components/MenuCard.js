@@ -1,7 +1,7 @@
 import React from "react";
-import GreekSalad from "./images/greek salad.jpg";
-import Bruschetta from "./images/Mario and Adrian A.jpg";
-import LemonDessert from "./images/lemon dessert.jpg";
+import GreekSalad from "../images/greek salad.jpg";
+import Bruschetta from "../images/Mario and Adrian A.jpg";
+import LemonDessert from "../images/lemon dessert.jpg";
 
 export default function MenuCard () {
     return (   

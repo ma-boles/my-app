@@ -1,5 +1,5 @@
 import React from "react";
-import Food  from "./images/restauranfood.jpg";
+import Food  from "../images/restauranfood.jpg";
 import { Link } from "react-router-dom";
 
 

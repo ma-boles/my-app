@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "./images/restaurant.jpg";
+import Image from "../images/restaurant.jpg";
 
 export default function Footer() {
     return (
