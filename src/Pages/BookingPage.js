@@ -5,9 +5,6 @@ import { fetchAPI, submitAPI } from "../api";
 import fetchData from "../api"
 
 
-
-
-
 export default function BookingPage() {
 
     const [date, setDate] = React.useState(new Date())

@@ -1,4 +1,7 @@
 /*import { useEffect } from "react";*/
+import React from "react";
+
+const currentDate = getDate();
 
 const seededRandom = (seed) => {
   var m = 2**35-31;
@@ -9,7 +12,7 @@ const seededRandom = (seed) => {
   };
 };
 
-function getDate() {
+ function getDate() {
   const currentDate = new Date();
   const year = currentDate.getFullYear();
   const month = currentDate.getMonth() + 1;
@@ -22,7 +25,6 @@ function getDate() {
   };
 }
 
-const currentDate = getDate();
 
 export function fetchAPI(date) {
     let result = [];
@@ -43,19 +45,23 @@ export function submitAPI(formData) {
     return true;
 }   
 
-export default function fetchData(date) {
-  /* const fetchData = (updateTimes) => {*/
+export default function FetchData() {
+  const [data, setData] = React.useState([]);
+
+  console.log("component rendered")
+
+  const fetchData = () => {
     fetch("https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js")
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    
-     /* 
-    useEffect(() => {
-      fetchData();
-    }, []);
-  */
+    .then(response => response.json())
+    .then(data => console.log(data))
   }
-    
+  React.useEffect(() => {
+    fetchData();
+  }, []);
+
+  return Object
+}
+ 
  
 
 
