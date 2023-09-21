@@ -1,7 +1,7 @@
 import React from "react";
 
 
-export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, submitForm }) {
+export default function BookingForm ({ availableTimes, occasions, dispatch, submitForm }) {
 
 
     const [ formData, setFormData ] = React.useState({
@@ -10,7 +10,7 @@ export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, 
         phone: "",
         time: "",
         date: "",
-        guests: "",
+        guests: "1",
         occasion: ""
     })
 
@@ -40,8 +40,8 @@ export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, 
 
     const currentDate = new Date().toISOString().split("T") [0]
 
-    let occasions = [ "", "Birthday", "Anniversary", "Banquet"]
-    let availableTimes = ["", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30"]
+    /*let occasions = [ "", "Birthday", "Anniversary"]
+    let availableTimes = ["", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30"]*/
 
     const options = availableTimes.map(time => <option key={time}>{time}</option>)
     const occasionsOptions = occasions.map(occasion => <option key={occasion}>{occasion}</option>)
@@ -62,7 +62,7 @@ export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, 
 
                 <div>
                     <label htmlFor="phone">Phone:</label>
-                    <input type="text" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required value={formData.phone} onChange={handleChangeForm}></input>
+                    <input type="text" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(000) 000-0000"required value={formData.phone} onChange={handleChangeForm}></input>
                 </div>
 
                 <div>

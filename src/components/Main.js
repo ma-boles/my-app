@@ -3,6 +3,7 @@ import { useReducer } from "react";
 import MenuCard from "./MenuCard";
 import TestimonialCard from "./TestimonialCard";
 import Chefs from "../images/Mario and Adrian b.jpg";
+import { fetchAPI, submitAPI } from "../api";
 
 
 /*
@@ -38,12 +39,12 @@ function reducer (state, action) {
         if(updateTimes.type === "cancel") return {date: initializeTimes.date + 1};
         return initializeTimes
     }*/
-export default function Main() {
+export default function Main(  ) {
 let date
 
-let availableTimes = ["", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30"]
-    const [ state, dispatch ] = useReducer(reducer,  initializeTimes(date))
-const occasions = [ "", "Birthday", "Anniversary", "Banquet"]
+/*let availableTimes = ["", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30"]
+    const [ state, dispatch ] = useReducer(reducer,  initializeTimes(date))*/
+const occasions = [ "", "Birthday", "Anniversary"]
 
 /*
     const [ availableTimes, setAvailableTimes ] = React.useState('')
@@ -51,7 +52,7 @@ const occasions = [ "", "Birthday", "Anniversary", "Banquet"]
 
 
     function updateTimes (date) {
-        console.log("test")
+        return fetchAPI(date)
         
     }
 

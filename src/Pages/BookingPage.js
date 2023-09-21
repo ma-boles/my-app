@@ -1,8 +1,10 @@
 import React from "react";
 import { useReducer } from "react";
-import BookingForm from "../BookingForm";
-import fetchAPI from "../api";
-import submitAPI from "../api";
+import BookingForm from "../components/BookingForm";
+import { fetchAPI, submitAPI } from "../api";
+import fetchData from "../api"
+
+
 
 
 
@@ -13,12 +15,17 @@ export default function BookingPage() {
    
 
     function initializeTimes(date) {
+        const currentDate = new Date().toISOString().split("T") [0];
+        const availableTimes = fetchData(currentDate);
+        console.log("available times for today:", availableTimes)
         return fetchAPI(date);
     } 
+    initializeTimes();
+
 
     function updateTimes(date){
-        
-        return fetchAPI(date)
+        const dateObj = new Date(date)
+        return fetchAPI(dateObj)
     }
 
     function submitForm(formData) {
