@@ -4,6 +4,7 @@ import MenuCard from "./MenuCard";
 import TestimonialCard from "./TestimonialCard";
 import Chefs from "../images/Mario and Adrian b.jpg";
 import { fetchAPI, submitAPI } from "../api";
+import { formData } from "../Pages/BookingPage"
 
 
 /*
@@ -29,8 +30,8 @@ function reducer (state, action) {
         default:
             throw new Error();
 
-        return state;
-    /*return {...state, [type]: payload };*/
+        /*return state;*/
+    return {...state, [type]: payload };
 }
 }
 
@@ -61,6 +62,12 @@ const occasions = [ "", "Birthday", "Anniversary"]
         console.log(initializeTimes)
     }
 
+    function submitForm(data) {
+        const apiResponse = submitAPI(formData);
+        
+        
+        return submitAPI(formData)
+    }
 
     return (
         <>      
