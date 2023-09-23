@@ -3,6 +3,8 @@ import React from "react";
 
 
 
+
+
 const seededRandom = (seed) => {
   var m = 2**35-31;
   var a = 185852;
@@ -25,19 +27,27 @@ const seededRandom = (seed) => {
   };
  
 
-}/*
+}
 const currentDateObj = getDate();
-console.log(currentDateObj)*/
+console.log(currentDateObj)
 
 const currentDate = new Date(); // Get the current date.
 const timeSlots = fetchAPI(currentDate); // Generate time slots based on the current date.
 console.log(timeSlots);
 
+
 export function fetchAPI(date) {
     let result = [];
-    let random = seededRandom(date.getDate());
+    /*let random = seededRandom(date.getDate());*/
 
-     for (let i = 17; i <= 23; i++) {
+
+    if(date instanceof Date) {
+      let random = seededRandom(date.getDate());
+    } else {
+      console.log("Invalid date", date);
+      
+    }
+    for (let i = 17; i <= 23; i++) {
       if(random() < 0.5) {
         result.push (i + ":00");
       }
@@ -45,6 +55,7 @@ export function fetchAPI(date) {
         result.push(i + ":30");
       }
   }
+     
      return result;    
 };
 

@@ -90,7 +90,7 @@ export default function BookingForm ({ availableTimes, occasions, dispatch, subm
                 </div>
      
                 <div>
-                    <button type="submit" value="Reservation" onClick={handleSubmit} aria-label="reserve">Reserve</button>
+                    <button id="submit" type="submit" value="Reservation" onClick={handleSubmit} aria-label="reserve">Reserve</button>
                 </div>
 
             </form>
