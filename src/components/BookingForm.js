@@ -1,14 +1,27 @@
 import React from "react";
 import "../styles/App.css"
+import * as Yup from "yup";
+import { Formik, Form, Field } from "formik";
 
+const SignupSchema = Yup.object().shape({
+    fname: Yup.string()
+    .min(3)
+    .max(15)
+    .required("required"),
+    lname: Yup.string()
+    .min(3)
+    .max(15)
+    .required("required"),
+    email: Yup.string().email("Invalid email").required("Required")     
+})
 
 export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, submitForm }) {
 
 
     const [ formData, setFormData ] = React.useState({
-        fname: "", 
+        /*fname: "", 
         lname: "",
-        email: "",
+        email: "",*/
         phone: "",
         time: "",
         date: "",
@@ -48,7 +61,7 @@ export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, 
     const options = availableTimes.map(time => <option key={time}>{time}</option>)
     const occasionsOptions = occasions.map(occasion => <option key={occasion}>{occasion}</option>)
 
-
+/*
     function checkform() {
         const formElements = document.forms["form"].elements;
         const submitBtn = document.getElementById("submit");
@@ -56,25 +69,42 @@ export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, 
         const submitBtnActive = Array.from(formElements).every(inputElement => inputElement.value.trim() !== "");
 
         submitBtn.disabled = !submitBtnActive
-    }
+    }*/
 
     return(
         <>
-        
-        <form name="form" onSubmit={handleSubmit}>
+        <Formik
+                initialValues={{
+                    fname: "",
+                    lname: "",
+                    email: "",
+                }}
+                validationSchema={SignupSchema}
+                onSubmit= {values => {
+                    console.log(values);
+                }}>
+                {({ errors, touched }) => (
+
+                
+        <Form name="form" onSubmit={handleSubmit}>
+            
                 <div>
                     <label htmlFor="name">First Name:</label><br />
-                    <input type="text" id="fname" name="fname" required value={formData.fname} onChange={handleChangeForm} onKeyUp={checkform()}/>
+                    <Field type="text" id="fname" name="fname" required value={formData.fname} onChange={handleChangeForm}/>
+                    {errors.fname && touched.fname ? (
+                        <div>{errors.fname}</div>) : null}
                 </div>
 
                 <div>
                     <label htmlFor="name">Last Name:</label><br />
-                    <input type="text" id="lname" name="lname" required value={formData.lname} onChange={handleChangeForm} onKeyUp={checkform()}/>
+                    <input type="text" id="lname" name="lname" required value={formData.lname} onChange={handleChangeForm}/>
+                    {errors.lname && touched.lname  ? (<div>{errors.lname }</div>) : null}
                 </div>
 
                 <div>
                     <label htmlFor="email">Email:</label><br />
-                    <input type="email" id="email" name="email" required value={formData.email} onChange={handleChangeForm} onKeyUp={checkform()}></input>
+                    <input type="email" id="email" name="email" required value={formData.email} onChange={handleChangeForm} ></input>
+                    {errors.email && touched.email ? <div>{errors.email}</div> : null }
                 </div>
 
                 <div>
@@ -110,7 +140,9 @@ export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, 
                     <button id="submit" type="submit" value="Reservation" onClick={handleSubmit} aria-label="reserve" disabled="disabled">Reserve</button>
                 </div>
 
-            </form>
+            </Form>
+            )}
+            </Formik>
         </>
     )
 }
