@@ -1,16 +1,18 @@
 import React from "react";
+import "../styles/App.css"
 
 
-export default function BookingForm ({ availableTimes, occasions, dispatch, submitForm }) {
+export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, submitForm }) {
 
 
     const [ formData, setFormData ] = React.useState({
-        name: "", 
+        fname: "", 
+        lname: "",
         email: "",
         phone: "",
         time: "",
         date: "",
-        guests: "1",
+        guests: "0",
         occasion: ""
     })
 
@@ -40,46 +42,61 @@ export default function BookingForm ({ availableTimes, occasions, dispatch, subm
 
     const currentDate = new Date().toISOString().split("T") [0]
 
-    /*let occasions = [ "", "Birthday", "Anniversary"]
-    let availableTimes = ["", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30"]*/
+    let occasions = [ "", "Birthday", "Anniversary"]
+    let availableTimes = ["", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30"]
 
     const options = availableTimes.map(time => <option key={time}>{time}</option>)
     const occasionsOptions = occasions.map(occasion => <option key={occasion}>{occasion}</option>)
 
+
+    function checkform() {
+        const formElements = document.forms["form"].elements;
+        const submitBtn = document.getElementById("submit");
+
+        const submitBtnActive = Array.from(formElements).every(inputElement => inputElement.value.trim() !== "");
+
+        submitBtn.disabled = !submitBtnActive
+    }
+
     return(
         <>
         
-        <form onSubmit={handleSubmit}>
+        <form name="form" onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="name">Name:</label><br />
-                    <input type="text" id="name" name="name" required value={formData.name} onChange={handleChangeForm} />
+                    <label htmlFor="name">First Name:</label><br />
+                    <input type="text" id="fname" name="fname" required value={formData.fname} onChange={handleChangeForm} onKeyUp={checkform()}/>
+                </div>
+
+                <div>
+                    <label htmlFor="name">Last Name:</label><br />
+                    <input type="text" id="lname" name="lname" required value={formData.lname} onChange={handleChangeForm} onKeyUp={checkform()}/>
                 </div>
 
                 <div>
                     <label htmlFor="email">Email:</label><br />
-                    <input type="email" id="email" name="email" required value={formData.email} onChange={handleChangeForm}></input>
+                    <input type="email" id="email" name="email" required value={formData.email} onChange={handleChangeForm} onKeyUp={checkform()}></input>
                 </div>
 
                 <div>
                     <label htmlFor="phone">Phone:</label>
-                    <input type="text" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(000) 000-0000"required value={formData.phone} onChange={handleChangeForm}></input>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(xxx) xxx-xxxx" required min="10" max="20" value={formData.phone} onChange={handleChangeForm} onKeyUp={checkform()}></input>
                 </div>
 
                 <div>
                     <label htmlFor="date">Date:</label>
-                    <input type="date" id="date" name="date" value={formData.date} min={currentDate} onChange={handleChangeDate}/>
+                    <input type="date" id="date" name="date" required value={formData.date} min={currentDate} onChange={handleChangeDate} onKeyUp={checkform()}/>
                 </div>
 
                 <div>
                     <label htmlFor="time">Time:</label><br />
-                    <select id="time" name="time" value={formData.time} onChange={handleChangeForm}>
+                    <select id="time" name="time" required value={formData.time} onChange={handleChangeForm} onKeyUp={checkform()}>
                         {options} 
                     </select>
                 </div>
 
                 <div>
                     <label htmlFor="guests">Guests:</label><br />
-                    <input type="number" id="guests" name="guests" placeholder="1" min="1" max="20" value={formData.guests} onChange={handleChangeForm}/>
+                    <input type="number" id="guests" name="guests" required placeholder="1" min="1" max="20" value={formData.guests} onChange={handleChangeForm} onKeyUp={checkform()}/>
                 </div>
 
                 <div>
@@ -90,7 +107,7 @@ export default function BookingForm ({ availableTimes, occasions, dispatch, subm
                 </div>
      
                 <div>
-                    <button id="submit" type="submit" value="Reservation" onClick={handleSubmit} aria-label="reserve">Reserve</button>
+                    <button id="submit" type="submit" value="Reservation" onClick={handleSubmit} aria-label="reserve" disabled="disabled">Reserve</button>
                 </div>
 
             </form>

@@ -40,7 +40,7 @@ export function fetchAPI(date) {
     let result = [];
     /*let random = seededRandom(date.getDate());*/
 
-
+/*
     if(date instanceof Date) {
       let random = seededRandom(date.getDate());
     } else {
@@ -54,7 +54,7 @@ export function fetchAPI(date) {
       if(random() > 0.5) {
         result.push(i + ":30");
       }
-  }
+  }*/
      
      return result;    
 };

@@ -27,7 +27,7 @@ export default function BookingPage() {
         return fetchAPI(dateObj)
     }
 
-    function submitForm (formData) {
+    function submitForm (/*formData*/) {
         const isSubmitted = submitAPI(formData);
         /*if (isSubmitted === true) {
             navigate("/ConfirmedBooking")

@@ -4,7 +4,7 @@ import MenuCard from "./MenuCard";
 import TestimonialCard from "./TestimonialCard";
 import Chefs from "../images/Mario and Adrian b.jpg";
 import { fetchAPI, submitAPI } from "../api";
-import { formData } from "../Pages/BookingPage"
+/*import { formData } from "../Pages/BookingPage"*/
 
 
 /*
@@ -63,10 +63,10 @@ const occasions = [ "", "Birthday", "Anniversary"]
     }
 
     function submitForm(data) {
-        const apiResponse = submitAPI(formData);
+        const apiResponse = submitAPI(/*formData*/);
         
         
-        return submitAPI(formData)
+        return submitAPI(/*formData*/)
     }
 
     return (
