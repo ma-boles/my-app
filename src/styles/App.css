@@ -194,7 +194,6 @@
 
 
 
-
 /* footer */
 .footer {
   justify-content: center;
@@ -222,7 +221,7 @@ footer {
   padding: .1rem;
 }
 .reservations--form {
-  background-color: rgb(199, 199, 199);
+  background-color: rgb(225, 225, 225);
   margin: 5% 20%;
   border-radius: 10px;
   justify-content: center;
@@ -243,16 +242,37 @@ footer {
   font-size: 1rem;
   margin-right: 5%;
 }
-
-.reservations--form > form > div > input{
+#fname,
+#lname {
+  width: 70%;
+  font-size: 1rem;
+  text-indent: 5px;
+  padding: .25rem;
+  border-radius: 5px;
+  border: none;
+}
+#lname {
+  width: 71%;
+  font-size: 1rem;
+  text-indent: 5px;
+  padding: .25rem;
+  border-radius: 5px;
+  border: none;
+}
+#email,
+#phone, 
+#date,
+#time,
+#guests,
+#occasion {
   font-size: 1rem;
   text-indent: 5px;
   padding: .25rem;
   border-radius: 5px;
   border: none;
   width: 100%;
-
 }
+
 select {
   border-radius: 5px;
   font-size: 1rem;
@@ -273,9 +293,26 @@ option {
   font-size: .9rem;
   cursor: pointer;
 }
+#fname:valid:required,
+#lname:valid:required,
+#email:valid:required,
+#phone:valid:required, 
+#date:valid:required,
+#time:valid:required,
+#guests:valid:required {
+  background-color:  rgba(221, 255, 221, 0.635);
+}
 
-
-
+#fname:invalid:required,
+#lname:invalid:required,
+#email:invalid:required,
+#phone:invalid:required, 
+#date:invalid:required,
+#time:invalid:required,
+#guests:invalid:required {
+  border: red double 1px;
+}
+  
 
 
 @media screen and (max-width: 1024px) {
