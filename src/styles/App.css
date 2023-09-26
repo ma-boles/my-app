@@ -292,7 +292,7 @@ option {
   background-color: #f4ce14;
   font-size: .9rem;
   cursor: pointer;
-}
+}/*
 #fname:valid:required,
 #lname:valid:required,
 #email:valid:required,
@@ -311,9 +311,14 @@ option {
 #time:invalid:required,
 #guests:invalid:required {
   border: red double 1px;
-}
+}*/
   
-
+.error {
+  color: #ff0000;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  display: block;
+}
 
 @media screen and (max-width: 1024px) {
   .content {
