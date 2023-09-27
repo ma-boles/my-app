@@ -10,13 +10,17 @@ import AboutPage from './Pages/AboutPage';
 function App() {
   return (
       <div className='App'>  
+      <header>
         <Nav />
+      </header>
             <Routes>
                 <Route path="/HomePage" element={<HomePage/>} />
                 <Route path="/BookingPage" element={<BookingPage/>}/>
                 <Route path="/AboutPage" element={<AboutPage />} />
             </Routes>
+      <footer>
         <Footer />
+      </footer>
       </div>
     );
 }

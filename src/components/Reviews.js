@@ -8,9 +8,9 @@ export default function Reviews() {
                 <heading className="testimonials--heading">
                     <h3>Testimonials</h3>
                 </heading>
-                <aside className="testimonials--card">
+                <article className="testimonials--card">
                     <TestimonialCard />
-                </aside>
+                </article>
             </section>
         </>
     )

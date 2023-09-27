@@ -55,10 +55,10 @@ const initialFormData = {
         const newErrors = {};
 
         if(!formData.fname.trim()) {
-            newErrors.fname = "Name is required";
+            newErrors.fname = "First Name is required";
         }
         if(!formData.lname.trim()) {
-            newErrors.lname = "Name is required";
+            newErrors.lname = "Last Name is required";
         }
         if(!formData.email.trim()) {
             newErrors.email = "Email is required";
@@ -111,13 +111,13 @@ const initialFormData = {
         <form name="form" onSubmit={handleSubmit}>
             
                 <div>
-                    <label htmlFor="name">First Name:</label><br />
+                    <label htmlFor="fname">First Name:</label><br />
                     <input type="text" id="fname" name="fname" required value={formData.fname} onChange={handleChangeForm}/>
                     {errors.fname && !submitted && <div className="error">{errors.fname}</div>}
                 </div>
 
                 <div>
-                    <label htmlFor="name">Last Name:</label><br />
+                    <label htmlFor="lname">Last Name:</label><br />
                     <input type="text" id="lname" name="lname" required value={formData.lname} onChange={handleChangeForm}/>
                     {errors.lname && !submitted && <div className="error">{errors.lname}</div>}
                 </div>
@@ -162,7 +162,7 @@ const initialFormData = {
                 </div>
      
                 <div>
-                    <button id="submit" type="submit" value="Reservation" aria-label="reserve" >Reserve</button>
+                    <button id="submit" type="submit" value="Reservation" aria-label="reserve">Reserve</button>
                 </div>
 
             </form>

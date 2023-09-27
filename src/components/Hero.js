@@ -16,8 +16,9 @@ export default function Hero () {
                     <button className="button--header">Reserve A Table</button>
                 </Link>
             </div>
-            <img src={Food} className="img--food"></img>
-           
+            <figure>
+                <img src={Food} className="img--food"></img>
+            </figure>
         </section>
         </>
     )
