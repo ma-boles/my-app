@@ -2,6 +2,7 @@
   margin: 0em;
 }
 
+
 /* nav */
 .nav > nav > ul {
   display: flex;
@@ -14,15 +15,15 @@
   margin: auto;
 }
 
+
 /* header */
 .header {
   background-color: #494949;
   display: flex;
-  
 }
 .content {
   margin-left: 16%;
-  margin-right: 30%;
+  margin-right: 0%;
   padding: 2em 0em;
 }
 .content > h1 {
@@ -41,7 +42,7 @@
   font-size: 16px;
   margin-bottom: 3em;
 }
-.content > button {
+.button--header {
   background-color: #f4ce14;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -49,16 +50,19 @@
   padding-bottom: 1em;
   border-radius: 10px;
   font-weight: bold;
-  margin-bottom: 6%
+  margin-bottom: 10%
+}
+.figure--hero {
+text-align: center;
 }
 .img--food {
-  width: 20em;
-  height: 17em;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: 17%;
+  width: 25%;
+  height:70%;
+  margin-top: 7%;
+  margin-left: 25%;
 }
+
+
 /* main */
 /* specials */
 
@@ -85,14 +89,15 @@
   border-radius: 10px;
   font-weight: bold;
 }
-  /* menu card */
+
+
+/* menu card */
   .menuCard {
     width: 19em;
     margin: .2em;
     background-color: rgba(183, 183, 183, 0.777);
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    
   }
   .menu--card {
     display: flex;
@@ -120,6 +125,9 @@
   .menuCard > h6 {
     padding-left: 1.5em;
   }
+  figure {
+    margin: 0px;
+  }
   .img--menu {
     width: 100%;
     height: 225px;
@@ -127,7 +135,8 @@
     border-top-left-radius: 15px;
   }
 
-  /* testimonials */
+
+/* testimonials */
   .testimonials {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.227);
@@ -159,9 +168,10 @@
     padding: 2em 2.5em;    
     margin-left: .5em;
     font-size: 18px;
-
   }
-  /* about */
+
+
+/* about */
   .about {
     display: flex;
   }
@@ -190,25 +200,24 @@
   }
 
 
-
-
-
-
 /* footer */
+footer {
+  display: flex;
+}
+
 .footer {
   justify-content: center;
   display: flex;
   background-color: rgba(0, 0, 0, 0.227);
+  width: 100%;
+  padding: 7% 10%;
+}
 
-}
-footer {
-  display: flex;
-  margin: 7% 15%;
-}
- footer > img {
+.footer--img {
   width: 300px;
   height: 200px;
  }
+
  footer > ul {
   list-style: none;
   justify-content: space-evenly;
@@ -324,9 +333,36 @@ option {
   .content {
     margin-right: 10%;
   }
+  .img--food {
+    margin-bottom: 20%;
+    margin-left: 0%;
+    height: 80%;
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 768px) {
+
+/* nav */
+  .header {
+    flex-wrap: wrap;
+  }
+
+/* hero */
+.content {
+  margin: 0% 25%;
+}
+  .figure--hero {
+    justify-content: center;  
+  }
+  .img--food {
+    margin-bottom: 20%;
+    margin-left: 0%;
+    height: 75%;
+    width: 35%;
+  }
+
+/* about */
   .about {
     flex-wrap: wrap;
     justify-content: center;
@@ -341,11 +377,17 @@ option {
     margin-left: 0px;
     margin-right: 0px;
   }
+
+/* footer */
+  .footer--img {
+    margin-top: 10%;
+  }
 }
+
 @media screen and (max-width: 425px) { 
   .nav > nav > ul {
    padding: 10px;
-   font-size: 12px;
+   font-size: .9rem;
    margin-right: auto;
    margin-left: auto;
   }
@@ -385,14 +427,15 @@ option {
     width: 95%;
   }
   /* footer */
-  footer {
-    margin:1em;
+  .footer {
     width: 95%;  
 }
-  footer > img {
-    width: 200px;
-    height: 100px;
+  .footer--img {
+    height: 75%;
+    width: 100%;
+    margin-top: 15%;
    }
+
    footer > ul {
     font-size: 10px;
     padding-left: 10px;
@@ -402,14 +445,20 @@ option {
 }
 
 @media screen and (max-width: 375px) {
+
+/* nav */
   .nav > nav > ul {
-    font-size: 10px;
+    font-size: .8rem;
    }
    .logo {
     width: 85px;
   }
 
   /* header */
+  .header {
+    justify-content: center;
+  }
+
   .img--food {
     width: 10em;
     height: 14em;
@@ -420,18 +469,16 @@ option {
     height: 16em;
   }
   /* footer */
-  footer > img {
-    width: 180px;
-    height: 80px;
+  .footer--img {
+    width: 95%;
+    height: 75%;
    }
   
 }
 @media screen and (max-width: 320px) {
-  .nav > nav > ul {
-    font-size: 8px;
-   }
+  
   .logo {
-    width: 70px;
+    width: 85px;
   }
 
   /* about */

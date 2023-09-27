@@ -16,7 +16,7 @@ export default function Hero () {
                     <button className="button--header">Reserve A Table</button>
                 </Link>
             </div>
-            <figure>
+            <figure className="figure--hero">
                 <img src={Food} className="img--food"></img>
             </figure>
         </section>

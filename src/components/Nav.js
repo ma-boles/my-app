@@ -13,12 +13,12 @@ export default function Nav() {
                     <Link to="../HomePage">Home</Link>               
                 </li>
                 <li><Link to="../AboutPage">About</Link></li>
-                <li><a>Menu</a></li>
+                {/*<li><a>Menu</a></li>*/}
                 <li>
                     <Link to="../BookingPage">Reservations</Link>
                 </li>
-                <li><a>Order Online</a></li>
-                <li><a>Login</a></li>
+                {/*<li><a>Order Online</a></li>
+                <li><a>Login</a></li>*/}
             </ul>
         </nav>
         
