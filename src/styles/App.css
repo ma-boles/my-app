@@ -1,5 +1,10 @@
 .App {
   margin: 0em;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.App::-webkit-scrollbar {
+  display: none;
 }
 
 
