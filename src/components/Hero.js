@@ -17,7 +17,7 @@ export default function Hero () {
                 </Link>
             </div>
             <figure className="figure--hero">
-                <img src={Food} className="img--food"></img>
+                <img src={Food} className="img--food" alt="food"></img>
             </figure>
         </section>
         </>

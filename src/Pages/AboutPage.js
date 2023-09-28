@@ -16,7 +16,7 @@ export default function AboutPage () {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget dolor morbi non arcu risus quis. Pellentesque habitant morbi tristique senectus. Quis risus sed vulputate odio ut enim blandit volutpat. Massa tincidunt nunc pulvinar sapien.</p>
                 </aside>
                 <figure>
-                    <img src={Chefs} className="img--about"></img>
+                    <img src={Chefs} className="img--about" alt="chefs"></img>
                 </figure>
         </section>
         </>

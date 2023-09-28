@@ -6,7 +6,7 @@ export default function Footer() {
         <div div className="footer">
             <footer>
                 <figure>
-                    <img src={Image} className="footer--img"></img>
+                    <img src={Image} className="footer--img" alt="terrace"></img>
                 </figure>
                 <ul>
                     <h4>Doormat Navigation</h4>
