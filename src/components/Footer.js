@@ -12,7 +12,7 @@ export default function Footer() {
                     <h4>Doormat Navigation</h4>
                     <li>Home</li>
                     <li>About</li>
-                    <li>menu</li>
+                    <li>Menu</li>
                     <li>Reservations</li>
                     <li>Order Online</li>
                     <li>Login</li>
@@ -20,14 +20,14 @@ export default function Footer() {
                 <ul>
                     <h4>Contact</h4>
                     <li>Address</li>
-                    <li>phone number</li>
-                    <li>email</li>
+                    <li>Phone Number</li>
+                    <li>Email</li>
                 </ul>
                 <ul>
-                    <h4>social Media Links</h4>
+                    <h4>Social Media Links</h4>
                     <li>Address</li>
-                    <li>phone number</li>
-                    <li>email</li>
+                    <li>Phone Number</li>
+                    <li>Email</li>
                 </ul>
             </footer>
         </div>

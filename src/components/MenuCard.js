@@ -8,7 +8,7 @@ export default function MenuCard () {
     <>
     <article className="menuCard">
         <figure>
-            <img src={GreekSalad} className="img--menu"></img>
+            <img src={GreekSalad} className="img--menu" alt="Greek Salad"></img>
         </figure>
         <div className="heading">
             <h4>Greek salad</h4>
@@ -20,7 +20,7 @@ export default function MenuCard () {
 
     <article className="menuCard">
         <figure>
-            <img src={Bruschetta} className="img--menu"></img>
+            <img src={Bruschetta} className="img--menu" alt="Bruschetta"></img>
         </figure>
         <div className="heading">
             <h4>Bruschetta</h4>
@@ -32,7 +32,7 @@ export default function MenuCard () {
 
     <article className="menuCard">
         <figure>
-            <img src={LemonDessert} className="img--menu"></img>
+            <img src={LemonDessert} className="img--menu" alt="Lemon Dessert"></img>
         </figure>
         <div className="heading">
             <h4>Lemon Dessert</h4>

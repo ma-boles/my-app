@@ -315,27 +315,7 @@ option {
   background-color: #f4ce14;
   font-size: .9rem;
   cursor: pointer;
-}/*
-#fname:valid:required,
-#lname:valid:required,
-#email:valid:required,
-#phone:valid:required, 
-#date:valid:required,
-#time:valid:required,
-#guests:valid:required {
-  background-color:  rgba(221, 255, 221, 0.635);
 }
-
-#fname:invalid:required,
-#lname:invalid:required,
-#email:invalid:required,
-#phone:invalid:required, 
-#date:invalid:required,
-#time:invalid:required,
-#guests:invalid:required {
-  border: red double 1px;
-}*/
-  
 .error {
   color: #ff0000;
   font-size: 0.8rem;
@@ -344,6 +324,7 @@ option {
 }
 
 @media screen and (max-width: 1024px) {
+  /* hero */
   .content {
     margin-right: 10%;
   }
@@ -352,6 +333,14 @@ option {
     margin-left: 0%;
     height: 80%;
     width: 40%;
+  }
+
+  /* reservaations */
+  .reservations--form {
+    margin: 2% 12%;
+  }
+  #lname {
+    width: 70%;
   }
 }
 
@@ -392,10 +381,24 @@ option {
     margin-right: 0px;
   }
 
-/* footer */
+/* reservation */
+  .reservations--form {
+    margin: 2% 8%;
+  }
+  #fname {
+    width: 64%;
+  }
+  #lname {
+    width: 65%;
+  }
 
+/* footer */
   .footer--img {
     margin-top: 10%;
+  }
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
@@ -434,6 +437,9 @@ option {
     padding: 10px;
    }
    /* about */
+   .about {
+    text-align: center;
+   }
    .about--content {
     margin: 10px;
     padding-bottom: 10px;
@@ -441,15 +447,25 @@ option {
   .img--about {
     width: 95%;
   }
-  /* footer */
-  footer {
-    flex-wrap: wrap;
-    justify-content: center;
+
+  /* reservation */
+  #form {
+    margin: 2% 5%;
+  }
+  .reservations--form {
+    margin: 2%;
+  }
+  #fname {
+    width: 71%;
+  }
+  #lname {
+    width: 71%;
   }
 
+
+  /* footer */ 
   .footer {
     width: 95%;  
-
 }
   .footer--img {
     height: 75%;
@@ -457,7 +473,6 @@ option {
     margin-left: auto;
     margin-right: auto;
    }
-
    footer > ul {
     font-size: 10px;
     padding-left: 10px;
@@ -490,6 +505,14 @@ option {
   .img--about {
     height: 16em;
   }
+
+/* reservations */
+  #fname {
+    width: 67%;
+  }
+  #lname {
+    width: 68%;
+  }
 }
 @media screen and (max-width: 320px) {
   
@@ -508,5 +531,18 @@ option {
   .img--food {
     width: 9em;
     height: 13em;
+  }
+
+  /* reservations */
+  .reservations--form {
+    margin: 0px;
+    width: 100%;
+  }
+  
+  #fname {
+    width: 64%;
+  }
+  #lname {
+    width: 64%;
   }
 }
