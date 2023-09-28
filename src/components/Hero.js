@@ -12,7 +12,7 @@ export default function Hero () {
                 <h3>Chicago</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-                <Link to="../ReservationsPage">
+                <Link to="../BookingPage">
                     <button className="button--header">Reserve A Table</button>
                 </Link>
             </div>

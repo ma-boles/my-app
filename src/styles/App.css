@@ -27,7 +27,7 @@
   display: flex;
 }
 .content {
-  margin-left: 16%;
+  margin-left: 19%;
   margin-right: 0%;
   padding: 2em 0em;
 }
@@ -44,7 +44,7 @@
 .content > p {
   color: white;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 3em;
 }
 .button--header {
@@ -64,7 +64,7 @@ text-align: center;
   width: 25%;
   height:70%;
   margin-top: 7%;
-  margin-left: 25%;
+  margin-left: 15%;
 }
 
 
@@ -129,6 +129,7 @@ text-align: center;
   }
   .menuCard > h6 {
     padding-left: 1.5em;
+    font-size: .7rem;
   }
   figure {
     margin: 0px;
@@ -180,12 +181,20 @@ text-align: center;
   .about {
     display: flex;
   }
+  .about--h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 3%;
+    padding-top: 2%;
+    text-decoration: underline;
+  }
   .about--content {
     width: 25em;
-    margin-right: 5%;
-    margin-left: 15%;
+    margin-right: 4%;
+    margin-left: 19%;
     margin-top: 7%;
-    margin-bottom: 7%;
+    margin-bottom: 9%;
     padding: 3em 0em;
   }
   .about--content > h2 {
@@ -198,8 +207,8 @@ text-align: center;
   .img--about {
     width: 25em;
     height: 20em;
-    margin-top:auto;
-    margin-bottom: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
     margin-left: auto;
     margin-right: 15%;
   }
@@ -236,13 +245,13 @@ footer {
 }
 .reservations--form {
   background-color: rgb(225, 225, 225);
-  margin: 5% 20%;
+  margin: 2% 20%;
   border-radius: 10px;
   justify-content: center;
 }
 .reservations--form > h3 {
   text-align: center;
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 .reservations--form > form {
   text-align: center;
@@ -384,6 +393,7 @@ option {
   }
 
 /* footer */
+
   .footer--img {
     margin-top: 10%;
   }
@@ -423,7 +433,7 @@ option {
     font-size: 12px;
     padding: 10px;
    }
-
+   /* about */
    .about--content {
     margin: 10px;
     padding-bottom: 10px;
@@ -432,13 +442,20 @@ option {
     width: 95%;
   }
   /* footer */
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .footer {
     width: 95%;  
+
 }
   .footer--img {
     height: 75%;
-    width: 100%;
     margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
    }
 
    footer > ul {
@@ -473,12 +490,6 @@ option {
   .img--about {
     height: 16em;
   }
-  /* footer */
-  .footer--img {
-    width: 95%;
-    height: 75%;
-   }
-  
 }
 @media screen and (max-width: 320px) {
   
@@ -498,8 +509,4 @@ option {
     width: 9em;
     height: 13em;
   }
-
-  footer > ul {
-    font-size: 8px;
-   }
 }

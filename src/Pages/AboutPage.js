@@ -5,8 +5,11 @@ import Chefs from "../images/Mario and Adrian b.jpg";
 export default function AboutPage () {
     return(
         <>
+          <header>
+            <h1 className="about--h1">About</h1>
+            </header>
         <section className="about">
-            <h1>About</h1>
+          
                 <aside className="about--content">
                     <h2>Little Lemon</h2>
                     <h3>Chicago</h3>
