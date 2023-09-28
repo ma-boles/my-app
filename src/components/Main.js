@@ -19,7 +19,7 @@ function reducer (state, action) {
             throw new Error();
 
     return {...state, [type]: payload };
-}
+    }
 }
 
 export default function Main(  ) {

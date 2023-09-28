@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/App.css"
 
 
-export default function BookingForm ({ /*availableTimes, occasions,*/ dispatch, submitForm }) {
+export default function BookingForm ({ dispatch, submitForm }) {
 
 const initialFormData = {
     fname: "", 
@@ -103,13 +103,11 @@ const initialFormData = {
     const options = availableTimes.map(time => <option key={time}>{time}</option>)
     const occasionsOptions = occasions.map(occasion => <option key={occasion}>{occasion}</option>)
 
-   
 
     return(
         <>
-                
         <form name="form" onSubmit={handleSubmit} id="form">
-            
+
                 <div>
                     <label htmlFor="fname">First Name:</label><br />
                     <input type="text" id="fname" name="fname" required value={formData.fname} onChange={handleChangeForm}/>
@@ -143,7 +141,7 @@ const initialFormData = {
                 <div>
                     <label htmlFor="time">Time:</label><br />
                     <select id="time" name="time" required value={formData.time} onChange={handleChangeForm} >
-                        {options} 
+                        {options}
                     </select>
                     {errors.time && !submitted && <div className="error">{errors.time}</div>}
                 </div>
@@ -160,7 +158,7 @@ const initialFormData = {
                         {occasionsOptions}
                     </select>
                 </div>
-     
+
                 <div>
                     <button id="submit" type="submit" value="Reservation" aria-label="reserve">Reserve</button>
                 </div>
@@ -170,4 +168,3 @@ const initialFormData = {
     )
 }
 
- 

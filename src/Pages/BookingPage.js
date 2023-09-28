@@ -27,8 +27,7 @@ export default function BookingPage() {
 
     function submitForm (formData) {
         const isSubmitted = submitAPI(formData);
-    };
-    
+    }; 
 
     function reducer (state, action) {
         let newState;
@@ -54,5 +53,4 @@ export default function BookingPage() {
     </div>
         </>
     )
-
 }
